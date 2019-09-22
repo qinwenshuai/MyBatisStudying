@@ -21,6 +21,21 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	
 	<!-- mybatis需要加载映射文件 -->
 	<mappers>
+		<!-- 
+		使用class属性引入接口的全路径名称:
+		使用规则:
+			1. 接口的名称和映射文件名称除扩展名外要完全相同
+			2. 接口和映射文件要放在同一个目录下
+		 -->
+           <mapper class="com.qin.mapper.UserMapper"/> 
+		
+		<!-- 使用包扫描的方式批量引入Mapper接口 
+				使用规则:
+				1. 接口的名称和映射文件名称除扩展名外要完全相同
+				2. 接口和映射文件要放在同一个目录下
+		
+		<package name="cn.atcast.mapper"/>-->
+		
 		<mapper resource="User.xml"/>
 	</mappers>
 	
