@@ -18,4 +18,10 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		</dataSource>
 		</environment>
 	</environments>
+	
+	<!-- mybatis需要加载映射文件 -->
+	<mappers>
+		<mapper resource="User.xml"/>
+	</mappers>
+	
 </configuration>
